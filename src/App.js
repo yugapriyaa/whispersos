@@ -315,15 +315,15 @@ function useFirebaseAudioListener() {
   return { audioFiles, loading, error };
 }
 
-// SOS message detection using Gemma 3n
+// SOS message detection using Gemma 3n 4B
 const detectSOSMessageWithGemma = async (transcript) => {
   if (!transcript) return { isSOS: false, confidence: 0, keywords: [], analysis: '' };
   
   try {
-    console.log('🧠 Analyzing message with Gemma 3n...');
+    console.log('🧠 Analyzing message with Gemma 3n 4B...');
     
-    // Gemma 3n API endpoint (you'll need to replace with your actual endpoint)
-    const GEMMA_API_URL = "https://api-inference.huggingface.co/models/google/gemma-2-9b-it";
+    // Gemma 3n 4B API endpoint
+    const GEMMA_API_URL = "https://api-inference.huggingface.co/models/google/gemma-3n-4b-it";
     const GEMMA_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN || "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";
     
     const prompt = `Analyze the following message and determine if it's an emergency SOS message. 
@@ -370,7 +370,7 @@ Consider factors like:
     }
 
     const result = await response.json();
-    console.log('Gemma 3n response:', result);
+    console.log('Gemma 3n 4B response:', result);
     
     // Parse the JSON response from Gemma
     let analysis;
@@ -401,7 +401,7 @@ Consider factors like:
     };
 
   } catch (error) {
-    console.error('Gemma 3n analysis failed:', error);
+    console.error('Gemma 3n 4B analysis failed:', error);
     // Fallback to keyword-based detection
     return detectSOSMessageFallback(transcript);
   }
@@ -606,11 +606,11 @@ const performSpeechBrainAnalysis = async (currentTranscript, voiceSamples) => {
 
 // Gemma semantic analysis for voice matching
 const performGemmaSemanticAnalysis = async (currentTranscript, voiceSamples) => {
-  console.log('🧠 Gemma: Performing semantic analysis...');
+      console.log('🧠 Gemma 3n 4B: Performing semantic analysis...');
   
   try {
-    // Use a different Gemma model that's more reliable
-    const GEMMA_API_URL = "https://api-inference.huggingface.co/models/google/gemma-2-9b-it";
+    // Use Gemma 3n 4B model for semantic analysis
+    const GEMMA_API_URL = "https://api-inference.huggingface.co/models/google/gemma-3n-4b-it";
     const GEMMA_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN || "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";
     
     // Create a comprehensive prompt for semantic voice analysis
@@ -665,7 +665,7 @@ Focus on:
     }
 
     const result = await response.json();
-    console.log('🧠 Gemma semantic analysis response:', result);
+    console.log('🧠 Gemma 3n 4B semantic analysis response:', result);
     
     // Parse the JSON response from Gemma
     let analysis;
@@ -692,7 +692,7 @@ Focus on:
     };
 
   } catch (error) {
-    console.error('Gemma semantic analysis failed:', error);
+    console.error('Gemma 3n 4B semantic analysis failed:', error);
     throw error;
   }
 };
@@ -1240,10 +1240,10 @@ function App() {
       console.log('📝 SOS Message transcript:', transcript);
       
       // Analyze if it's an SOS message using Gemma 3n
-      console.log('🔍 Starting SOS analysis with Gemma 3n...');
+      console.log('🔍 Starting SOS analysis with Gemma 3n 4B...');
       const analysis = await detectSOSMessageWithGemma(transcript);
       setSosAnalysis(analysis);
-      console.log('🚨 SOS Analysis with Gemma 3n:', analysis);
+      console.log('🚨 SOS Analysis with Gemma 3n 4B:', analysis);
       
       // Send emergency alerts if SOS is detected
       if (analysis && analysis.isSOS) {
@@ -1722,7 +1722,7 @@ function App() {
               </div>
             )}
             
-            {/* SOS Analysis Display with Gemma 3n */}
+            {/* SOS Analysis Display with Gemma 3n 4B */}
             {sosAnalysis && (
               <div style={{
                 marginTop: '1rem',
@@ -1743,7 +1743,7 @@ function App() {
                 }}>
                   {sosAnalysis.isSOS ? '🚨 SOS DETECTED!' : '✅ No Emergency Detected'}
                   <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>
-                    (Gemma 3n Analysis)
+                    (Gemma 3n 4B Analysis)
                   </span>
                 </h3>
                 
@@ -1890,7 +1890,7 @@ function App() {
                 }}>
                   {voicePrintMatch.matchFound ? '🎤 VOICE MATCH FOUND!' : '❌ No Voice Match'}
                   <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>
-                    (Gemma 3n Analysis)
+                    (Gemma 3n 4B Analysis)
                   </span>
                 </h3>
                 
