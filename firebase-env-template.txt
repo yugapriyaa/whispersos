@@ -1,0 +1,16 @@
+# Firebase Configuration Template
+# Create a .env file in your project root with these variables:
+
+REACT_APP_FIREBASE_API_KEY=AIzaSyDKZfeYYUyivmconbzA63Ouai3XdTfCa4Q
+REACT_APP_FIREBASE_AUTH_DOMAIN=whispersoscursor.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=whispersoscursor
+REACT_APP_FIREBASE_STORAGE_BUCKET=whispersoscursor.firebasestorage.app
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=460052648261
+REACT_APP_FIREBASE_APP_ID=1:460052648261:web:f9975892cc672a13ddee2c
+REACT_APP_FIREBASE_MEASUREMENT_ID=G-5K4WX7G27W
+
+# Instructions:
+# 1. Create a .env file in your project root
+# 2. Copy the above variables into the .env file
+# 3. The .env file is already in your .gitignore, so it won't be committed to version control
+# 4. Restart your development server after creating the .env file 
