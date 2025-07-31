@@ -47,8 +47,8 @@ const transcribeWithHuggingFace = async (audioUrl) => {
     // Hugging Face API endpoint for Whisper
     const HF_API_URL = "https://api-inference.huggingface.co/models/openai/whisper-large-v3";
     
-    // You'll need to add your Hugging Face API token here
-    const HF_API_TOKEN = "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"; // Replace with your actual Hugging Face token
+    // Use environment variable for Hugging Face API token
+    const HF_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN || "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";
     
     console.log('🚀 Sending request to Hugging Face API...');
     
@@ -324,7 +324,7 @@ const detectSOSMessageWithGemma = async (transcript) => {
     
     // Gemma 3n API endpoint (you'll need to replace with your actual endpoint)
     const GEMMA_API_URL = "https://api-inference.huggingface.co/models/google/gemma-2-9b-it";
-    const GEMMA_API_TOKEN = "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"; // Replace with your actual token
+    const GEMMA_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN || "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";
     
     const prompt = `Analyze the following message and determine if it's an emergency SOS message. 
     
@@ -611,7 +611,7 @@ const performGemmaSemanticAnalysis = async (currentTranscript, voiceSamples) => 
   try {
     // Use a different Gemma model that's more reliable
     const GEMMA_API_URL = "https://api-inference.huggingface.co/models/google/gemma-2-9b-it";
-    const GEMMA_API_TOKEN = "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";
+    const GEMMA_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN || "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";
     
     // Create a comprehensive prompt for semantic voice analysis
     const voiceSampleTexts = voiceSamples.map(sample => 
