@@ -7,13 +7,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDKZfeYYUyivmconbzA63Ouai3XdTfCa4Q",
-  authDomain: "whispersoscursor.firebaseapp.com",
-  projectId: "whispersoscursor",
-  storageBucket: "whispersoscursor.firebasestorage.app",
-  messagingSenderId: "460052648261",
-  appId: "1:460052648261:web:f9975892cc672a13ddee2c",
-  measurementId: "G-5K4WX7G27W"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY || "AIzaSyDKZfeYYUyivmconbzA63Ouai3XdTfCa4Q",
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN || "whispersoscursor.firebaseapp.com",
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID || "whispersoscursor",
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET || "whispersoscursor.firebasestorage.app",
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID || "460052648261",
+  appId: process.env.REACT_APP_FIREBASE_APP_ID || "1:460052648261:web:f9975892cc672a13ddee2c",
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID || "G-5K4WX7G27W"
 };
 
 // Log Firebase configuration (without sensitive data)
