@@ -1,0 +1,23 @@
+# Environment Variables Template for WhisperSOS
+# Copy this content to a file named .env in your project root
+
+# Firebase Configuration
+REACT_APP_FIREBASE_API_KEY=your_firebase_api_key_here
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.firebasestorage.app
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+REACT_APP_FIREBASE_MEASUREMENT_ID=your_measurement_id
+
+# Hugging Face API Token
+REACT_APP_HUGGING_FACE_TOKEN=your_hugging_face_token_here
+
+# Google Maps API Key (optional - for enhanced map features)
+# REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+
+# Instructions:
+# 1. Copy this content to a file named .env in your project root
+# 2. Replace the placeholder values with your actual API keys
+# 3. Never commit .env files to version control
+# 4. Keep your API keys secure 
