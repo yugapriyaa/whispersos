@@ -144,11 +144,18 @@ npm start
 
 ### Environment Variables
 Create `.env` files in both directories with:
+
+**Portal/.env:**
 ```
 REACT_APP_HUGGING_FACE_TOKEN=your_hugging_face_token
-REACT_APP_FIREBASE_API_KEY=your_firebase_key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your_domain
-REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_firebase_project_id
+```
+
+**App/.env:**
+```
+EXPO_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
 ```
 
 ## 🛠️ Installation

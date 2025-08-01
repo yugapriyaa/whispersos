@@ -5,7 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDKZfeYYUyivmconbzA63Ouai3XdTfCa4Q",
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
   authDomain: "whispersoscursor.firebaseapp.com",
   projectId: "whispersoscursor",
   storageBucket: "whispersoscursor.firebasestorage.app",

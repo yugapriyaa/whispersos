@@ -48,7 +48,11 @@ const transcribeWithHuggingFace = async (audioUrl) => {
     const HF_API_URL = "https://api-inference.huggingface.co/models/openai/whisper-large-v3";
     
     // Use environment variable for Hugging Face API token
-    const HF_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN || "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";
+    const HF_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN;
+    
+    if (!HF_API_TOKEN) {
+      throw new Error('Hugging Face API token not found. Please set REACT_APP_HUGGING_FACE_TOKEN environment variable.');
+    }
     
     console.log('🚀 Sending request to Hugging Face API...');
     
@@ -324,7 +328,11 @@ const detectSOSMessageWithGemma = async (transcript) => {
     
     // Gemma 3n 4B API endpoint
     const GEMMA_API_URL = "https://api-inference.huggingface.co/models/google/gemma-3n-4b-it";
-    const GEMMA_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN || "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";
+    const GEMMA_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN;
+    
+    if (!GEMMA_API_TOKEN) {
+      throw new Error('Hugging Face API token not found. Please set REACT_APP_HUGGING_FACE_TOKEN environment variable.');
+    }
     
     const prompt = `Analyze the following message and determine if it's an emergency SOS message. 
     
@@ -611,7 +619,11 @@ const performGemmaSemanticAnalysis = async (currentTranscript, voiceSamples) => 
   try {
     // Use Gemma 3n 4B model for semantic analysis
     const GEMMA_API_URL = "https://api-inference.huggingface.co/models/google/gemma-3n-4b-it";
-    const GEMMA_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN || "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";
+    const GEMMA_API_TOKEN = process.env.REACT_APP_HUGGING_FACE_TOKEN;
+    
+    if (!GEMMA_API_TOKEN) {
+      throw new Error('Hugging Face API token not found. Please set REACT_APP_HUGGING_FACE_TOKEN environment variable.');
+    }
     
     // Create a comprehensive prompt for semantic voice analysis
     const voiceSampleTexts = voiceSamples.map(sample => 
