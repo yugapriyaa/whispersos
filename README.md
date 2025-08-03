@@ -48,6 +48,9 @@ WhisperSOS is a **prototype** emergency response system that demonstrates the co
    Location Tracking       Audio Files          AI Analysis
    Background Processing   User Profiles        Alert Management
 ```
+Web app 
+<img width="725" height="323" alt="image" src="https://github.com/user-attachments/assets/4716cdd3-b940-459c-8ca2-c0ca3dabb40f" />
+
 
 ## 📱 Mobile Application
 
