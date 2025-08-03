@@ -109,8 +109,7 @@ npm start
 
 ### Web Portal
 - **Framework**: React 19
-- **AI Services**: Hugging Face API, SpeechBrain
-- **Audio Processing**: Web Audio API
+- **AI Services**: Gemma 3n 4B, Hugging Face API, SpeechBrain
 - **Maps**: Google Maps Integration
 - **Styling**: CSS3 with responsive design
 - **Deployment**: Firebase Hosting
@@ -120,17 +119,18 @@ npm start
 - **Storage**: Firebase Storage
 - **Authentication**: Firebase Auth
 - **Hosting**: Firebase Hosting
-- **Functions**: Firebase Cloud Functions
 
 ## 🚨 Emergency Response Workflow
 
-1. **Detection**: Mobile app continuously monitors voice input
+1. **Gathering audio input for voiceprint creation**: User voice data is captured at setup to enable secure voiceprint identification
 2. **Upload**: Audio files automatically uploaded to Firebase
-3. **Transcription**: Web portal processes audio with AI models
-4. **Analysis**: Multiple AI models analyze for emergency indicators
-5. **Verification**: Voice print matching confirms user identity
-6. **Alert**: Automated notifications to emergency services
-7. **Response**: Real-time coordination through web dashboard
+3. **Monitoring**: Web portal actively listens for SOS messages
+4. **Transcription** Web portal processes audio with Whisper
+5. **Analysis**: Gemma 3n 4B is used to analyze for emergency indicators
+6. **Verification**: Voice print matching by Gemma 3n 4B and SpeechBrain for user identity confirmation
+7. **Alert**: Automated notifications to emergency services
+8. **Location** Maps display the last known location of the user for emergency tracking
+9. **Live Dashboard for Emergency Coordination**: Real-time coordination through web dashboard
 
 ## 📋 Prerequisites
 
@@ -142,8 +142,10 @@ npm start
 
 ### Web Development
 - Node.js 18+
-- npm or yarn
-- Modern web browser
+- npm
+- React v19.1.0
+- Firebase v12.0.0
+- Web browser
 - Hugging Face API token
 
 ### Environment Variables
@@ -213,6 +215,19 @@ npm start
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+This project builds upon the following open-source technologies:
+
+- **Speech Recognition**: OpenAI Whisper (MIT License)
+- **Language Models**: Google Gemma 3n (Google Gemma License)
+- **Voice Processing**: SpeechBrain (Apache 2.0)
+- **Cloud Platform**: Firebase (Apache 2.0)
+- **Frontend Framework**: React.js (MIT License)
+- **Maps Integration**: Google Maps Platform
+
+All technologies are used in compliance with their respective licenses.
 
 ## 🆘 Emergency Use
 
