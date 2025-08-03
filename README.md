@@ -125,11 +125,11 @@ npm start
 1. **Gathering audio input for voiceprint creation**: User voice data is captured at setup to enable secure voiceprint identification
 2. **Upload**: Audio files automatically uploaded to Firebase
 3. **Monitoring**: Web portal actively listens for SOS messages
-4. **Transcription** Web portal processes audio with Whisper
+4. **Transcription**: Web portal processes audio with Whisper
 5. **Analysis**: Gemma 3n 4B is used to analyze for emergency indicators
 6. **Verification**: Voice print matching by Gemma 3n 4B and SpeechBrain for user identity confirmation
 7. **Alert**: Automated notifications to emergency services
-8. **Location** Maps display the last known location of the user for emergency tracking
+8. **Location**: Maps display the last known location of the user for emergency tracking
 9. **Live Dashboard for Emergency Coordination**: Real-time coordination through web dashboard
 
 ## 📋 Prerequisites
@@ -187,23 +187,6 @@ npm install
 cp env-template.txt .env
 npm start
 ```
-
-## 🔒 Security Features
-
-- **Encrypted Storage**: All sensitive data encrypted at rest
-- **Secure Authentication**: Firebase Auth with multi-factor support
-- **API Security**: Rate limiting and token-based access
-- **Data Privacy**: GDPR-compliant data handling
-- **Audit Logging**: Comprehensive activity tracking
-
-## 📊 Performance Optimization
-
-- **Background Processing**: Efficient mobile resource usage
-- **Audio Compression**: Optimized file sizes for upload
-- **Caching**: Intelligent data caching for faster response
-- **Lazy Loading**: On-demand component loading
-- **CDN Integration**: Global content delivery
-
 ## 🤝 Contributing
 
 1. Fork the repository
