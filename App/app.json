@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Whisper_SOS",
+    "slug": "Whisper_SOS",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app needs access to microphone for voice monitoring and emergency detection.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location for emergency tracking and voice recording metadata.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs access to location for emergency tracking and voice recording metadata.",
+        "UIBackgroundModes": [
+          "audio",
+          "location",
+          "background-processing"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_BACKGROUND_LOCATION",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.WAKE_LOCK"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow WhisperSOS to access your microphone for voice monitoring."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow WhisperSOS to access your location for emergency tracking."
+        }
+      ]
+    ]
+  }
+}
