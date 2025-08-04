@@ -122,7 +122,7 @@ npm start
 
 ## 🚨 Emergency Response Workflow
 
-1. **Gathering audio input for voiceprint creation**: User voice data is captured at setup to enable secure voiceprint identification
+1. **Mobile app - Gathering audio input for voiceprint creation**: User voice data is captured at setup to enable secure voiceprint identification
 2. **Upload**: Audio files automatically uploaded to Firebase
 3. **Mobile app monitoring**: Actively listens to messages and updates firebase every 10 seconds
 4. **Web portal Monitoring**: Web portal actively listens for SOS messages
