@@ -124,13 +124,15 @@ npm start
 
 1. **Gathering audio input for voiceprint creation**: User voice data is captured at setup to enable secure voiceprint identification
 2. **Upload**: Audio files automatically uploaded to Firebase
-3. **Monitoring**: Web portal actively listens for SOS messages
-4. **Transcription**: Web portal processes audio with Whisper
-5. **Analysis**: Gemma 3n 4B is used to analyze for emergency indicators
-6. **Verification**: Voice print matching by Gemma 3n 4B and SpeechBrain for user identity confirmation
-7. **Alert**: Automated notifications to emergency services
-8. **Location**: Maps display the last known location of the user for emergency tracking
-9. **Live Dashboard for Emergency Coordination**: Real-time coordination through web dashboard
+3. **Mobile app monitoring**: Actively listens to messages and updates firebase every 10 seconds
+4. **Web portal Monitoring**: Web portal actively listens for SOS messages
+5. **Web portal Detection**: Detects a new message from firebase
+6. **Transcription**: Web portal processes audio with Whisper
+7. **Analysis**: Gemma 3n 4B is used to analyze for emergency indicators
+8. **Verification**: Voice print matching by Gemma 3n 4B and SpeechBrain for user identity confirmation
+9. **Alert**: Automated notifications to emergency services
+10. **Location**: Maps display the last known location of the user for emergency tracking
+11. **Live Dashboard for Emergency Coordination**: Real-time coordination through web dashboard
 
 ## 📋 Prerequisites
 
